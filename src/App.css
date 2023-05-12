@@ -1,38 +1,104 @@
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap");
+/*Variables*/
+:root {
+  --main-background-color: #eee;
+  --main-text-color: #666666;
+  --main-white-color: #fff;
+  --main-padding: 10px;
+  --main-margin: 20px;
+}
+/*html*/
+html {
+  font-size: 16px;
+}
+/*All*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*Body*/
+body {
+  background-color: var(--main-background-color);
+  font-family: "Heebo", sans-serif;
+}
+/*App*/
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  padding: calc(var(--main-padding) * 2) 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loading {
+  color: var(--main-text-color);
+  font-size: 1.2rem;
+ margin-bottom: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Pokemon List*/
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.cards .card {
+  background-color: var(--main-white-color);
+  width: 250px;
+  height: 80px;
+  margin: 0 var(--main-margin);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: var(--main-margin);
+}
+.cards .card span {
+  position: absolute;
+  width: 6px;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.cards .card p,
+.cards .card svg {
+  padding-left: calc(var(--main-padding) * 3);
+  font-size: 1.2rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards .card p {
+  color: var(--main-text-color);
+}
+.cards .card svg {
+  font-size: 1.7rem;
+}
+/*Pokemon Buttons*/
+button {
+  margin: 0 calc(var(--main-margin) / 4 + 2px);
+  padding: var(--main-padding);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: var(--main-background-color);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: var(--main-margin);
+}
+button svg {
+  margin: 0 calc(var(--main-margin) / 4 + 1px);
+  font-size: 1.2rem;
+}
+button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

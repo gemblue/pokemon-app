@@ -1,0 +1,18 @@
+--NOTES--
+
+
+
+
+--ROADMAP--
+-1- Create Template HTML5 , CSS3 and JXS : Javascript XML
+  -- Create PokemonList
+  -- Create PokemonButtons
+
+-2- Install React Fontawesome
+-3- Install Axios
+-4- Fetch Pokemon Name Using Axios Library
+-5- Create Function To Next Page and Function To Previous Page
+-6- Click Buttons 
+-7- Disabled Buttons When The Url Is NULL
+-8- Install Unique Key 
+-9- Create Function Random Colors And Random Icons When You Click
