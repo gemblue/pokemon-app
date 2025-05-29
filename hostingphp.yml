@@ -1,0 +1,5 @@
+project_name: Pokemon Dex
+framework: react
+commands:
+  - "npm install"
+  - "npm run build"
